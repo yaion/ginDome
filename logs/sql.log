@@ -1,0 +1,513 @@
+
+2023/08/31 02:07:04 E:/code/go/ginDome/initialize/gorm.go:37
+[error] failed to initialize database, got error dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it.
+
+2023/08/31 02:19:39 E:/code/go/ginDome/router/router.go:26 Error 1146 (42S02): Table 'gin-demo.user' doesn't exist
+[1.505ms] [rows:0] SELECT * FROM `user` WHERE `user`.`deleted_at` IS NULL
+
+2023/08/31 02:20:04 E:/code/go/ginDome/router/router.go:26 Error 1146 (42S02): Table 'gin-demo.user' doesn't exist
+[0.882ms] [rows:0] SELECT * FROM `user` WHERE `user`.`deleted_at` IS NULL
+
+2023/08/31 02:20:16 E:/code/go/ginDome/router/router.go:27 Error 1146 (42S02): Table 'gin-demo.user' doesn't exist
+[1.016ms] [rows:0] SELECT * FROM `user` WHERE `user`.`deleted_at` IS NULL
+
+2023/08/31 02:22:29 E:/code/go/ginDome/router/router.go:27 Error 1146 (42S02): Table 'gin-demo.user' doesn't exist
+[1.017ms] [rows:0] SELECT * FROM `user` WHERE `user`.`deleted_at` IS NULL
+
+2023/08/31 02:23:16 E:/code/go/ginDome/router/router.go:27 Error 1146 (42S02): Table 'gin-demo.user' doesn't exist
+[2.020ms] [rows:0] SELECT * FROM `user` WHERE `user`.`deleted_at` IS NULL
+
+2023/08/31 02:25:05 E:/code/go/ginDome/router/router.go:27 Error 1146 (42S02): Table 'gin-demo.user' doesn't exist
+[1.506ms] [rows:0] SELECT * FROM `user` WHERE `user`.`deleted_at` IS NULL
+
+2023/08/31 02:26:38 E:/code/go/ginDome/router/router.go:27 Error 1146 (42S02): Table 'gin-demo.user' doesn't exist
+[1.505ms] [rows:0] SELECT * FROM `user` WHERE `user`.`deleted_at` IS NULL
+
+2023/08/31 02:27:05 E:/code/go/ginDome/router/router.go:27
+[15.538ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/08/31 18:59:16 E:/code/go/ginDome/router/router.go:27
+[15.214ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/21 17:24:12 E:/code/go/ginDome/initialize/gorm.go:37
+[error] failed to initialize database, got error dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it.
+
+2023/09/21 17:25:17 E:/code/go/ginDome/router/router.go:28
+[32.526ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/21 17:25:48 E:/code/go/ginDome/router/router.go:28
+[15.757ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/21 17:25:52 E:/code/go/ginDome/router/router.go:28
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/22 15:15:49 E:/code/go/ginDome/initialize/gorm.go:37
+[error] failed to initialize database, got error dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it.
+
+2023/09/22 15:19:14 E:/code/go/ginDome/initialize/gorm.go:37
+[error] failed to initialize database, got error dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it.
+
+2023/09/23 14:16:38 E:/code/go/ginDome/model/entity/user.go:31
+[1.030ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 14:17:46 E:/code/go/ginDome/model/entity/user.go:31
+[0.056ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 14:17:55 E:/code/go/ginDome/model/entity/user.go:31
+[1.079ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 14:18:34 E:/code/go/ginDome/model/entity/user.go:31
+[0.739ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 5 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 18:26:33 E:/code/go/ginDome/model/entity/user.go:25
+[0.514ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 18:34:02 E:/code/go/ginDome/model/entity/user.go:25
+[0.740ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 18:43:09 E:/code/go/ginDome/model/entity/user.go:25
+[0.515ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:01:16 E:/code/go/ginDome/model/entity/user.go:25
+[0.637ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:01:22 E:/code/go/ginDome/model/entity/user.go:25
+[0.813ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:01:24 E:/code/go/ginDome/model/entity/user.go:25
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:02:54 E:/code/go/ginDome/model/entity/user.go:25
+[1.294ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:39:41 E:/code/go/ginDome/model/entity/user.go:25
+[0.661ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:39:52 E:/code/go/ginDome/model/entity/user.go:25
+[0.846ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:49:54 E:/code/go/ginDome/model/entity/user.go:25
+[1.031ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:51:44 E:/code/go/ginDome/model/entity/user.go:25
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:52:29 E:/code/go/ginDome/model/entity/user.go:25
+[1.059ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:52:32 E:/code/go/ginDome/model/entity/user.go:25
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:55:31 E:/code/go/ginDome/model/entity/user.go:25
+[1.283ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:55:48 E:/code/go/ginDome/model/entity/user.go:25
+[0.599ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 22:57:16 E:/code/go/ginDome/model/entity/user.go:25
+[0.714ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:11:15 E:/code/go/ginDome/model/entity/user.go:25
+[1.268ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:11:46 E:/code/go/ginDome/model/entity/user.go:25
+[0.791ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:15:20 E:/code/go/ginDome/model/entity/user.go:25
+[1.250ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:17:15 E:/code/go/ginDome/model/entity/user.go:25
+[1.029ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:17:43 E:/code/go/ginDome/model/entity/user.go:25
+[0.712ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:18:16 E:/code/go/ginDome/model/entity/user.go:25
+[1.038ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:19:17 E:/code/go/ginDome/model/entity/user.go:25
+[0.708ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:20:44 E:/code/go/ginDome/model/entity/user.go:25
+[1.236ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:21:58 E:/code/go/ginDome/model/entity/user.go:25
+[1.038ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:23:43 E:/code/go/ginDome/model/entity/user.go:25
+[1.031ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:47:31 E:/code/go/ginDome/model/entity/user.go:25
+[1.027ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:47:53 E:/code/go/ginDome/model/entity/user.go:25
+[0.505ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:55:05 E:/code/go/ginDome/model/entity/user.go:25
+[0.616ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/23 23:55:15 E:/code/go/ginDome/model/entity/user.go:25
+[0.594ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:06:40 E:/code/go/ginDome/model/entity/user.go:25
+[1.227ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:06:44 E:/code/go/ginDome/model/entity/user.go:25
+[0.887ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test1' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:12:30 E:/code/go/ginDome/model/entity/user.go:25
+[1.398ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test1' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:13:53 E:/code/go/ginDome/model/entity/user.go:25
+[0.537ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test1' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:13:57 E:/code/go/ginDome/model/entity/user.go:25
+[0.011ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test1' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:14:42 E:/code/go/ginDome/model/entity/user.go:25
+[1.152ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test1' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:18:24 E:/code/go/ginDome/model/entity/user.go:25
+[0.523ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test1' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:23:32 E:/code/go/ginDome/model/entity/user.go:25
+[1.770ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:23:43 E:/code/go/ginDome/model/entity/user.go:25
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:23:55 E:/code/go/ginDome/model/entity/user.go:25
+[0.688ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:24:03 E:/code/go/ginDome/model/entity/user.go:25
+[0.524ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:24:07 E:/code/go/ginDome/model/entity/user.go:25
+[0.520ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:24:13 E:/code/go/ginDome/model/entity/user.go:25
+[0.520ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:24:18 E:/code/go/ginDome/model/entity/user.go:25
+[0.961ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test1' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:24:26 E:/code/go/ginDome/model/entity/user.go:25
+[0.605ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:24:28 E:/code/go/ginDome/model/entity/user.go:25
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:50:19 E:/code/go/ginDome/model/entity/user.go:25
+[0.517ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:51:25 E:/code/go/ginDome/model/entity/user.go:25
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:55:11 E:/code/go/ginDome/model/entity/user.go:25
+[0.671ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:55:33 E:/code/go/ginDome/model/entity/user.go:25
+[0.514ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 00:55:42 E:/code/go/ginDome/model/entity/user.go:25
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 19:43:11 E:/code/go/ginDome/model/entity/user.go:29
+[0.509ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 19:44:54 E:/code/go/ginDome/model/entity/user.go:29
+[0.650ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 19:46:34 E:/code/go/ginDome/model/entity/user.go:29
+[0.510ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 19:46:56 E:/code/go/ginDome/model/entity/user.go:29
+[0.520ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 19:48:53 E:/code/go/ginDome/model/entity/user.go:29
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:08:12 E:/code/go/ginDome/model/entity/user.go:29
+[0.581ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:11:24 E:/code/go/ginDome/model/entity/user.go:29
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:11:28 E:/code/go/ginDome/model/entity/user.go:29
+[0.695ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:14:05 E:/code/go/ginDome/model/entity/user.go:29
+[0.567ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:14:11 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:17:08 E:/code/go/ginDome/model/entity/user.go:29
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:19:11 E:/code/go/ginDome/model/entity/user.go:29
+[1.256ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:30:54 E:/code/go/ginDome/model/entity/user.go:29
+[0.517ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:32:05 E:/code/go/ginDome/model/entity/user.go:29
+[0.679ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:32:23 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:34:11 E:/code/go/ginDome/model/entity/user.go:29
+[1.019ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:34:11 E:/code/go/ginDome/model/entity/user.go:64
+[0.652ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%john_doe%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:34:29 E:/code/go/ginDome/model/entity/user.go:29
+[0.517ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:34:29 E:/code/go/ginDome/model/entity/user.go:64
+[0.558ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:34:32 E:/code/go/ginDome/model/entity/user.go:29
+[0.519ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:34:32 E:/code/go/ginDome/model/entity/user.go:64
+[0.539ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:34:41 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:34:41 E:/code/go/ginDome/model/entity/user.go:64
+[0.000ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:36:01 E:/code/go/ginDome/model/entity/user.go:29
+[0.530ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:36:57 E:/code/go/ginDome/model/entity/user.go:29
+[0.513ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:39:17 E:/code/go/ginDome/model/entity/user.go:29
+[0.516ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:39:17 E:/code/go/ginDome/model/entity/user.go:64
+[0.654ms] [rows:1] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:39:27 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:39:27 E:/code/go/ginDome/model/entity/user.go:64
+[0.000ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%john_doe%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:39:30 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:39:30 E:/code/go/ginDome/model/entity/user.go:64
+[0.097ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%john_doe%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:39:42 E:/code/go/ginDome/model/entity/user.go:29
+[0.508ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:39:42 E:/code/go/ginDome/model/entity/user.go:64
+[0.518ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:39:47 E:/code/go/ginDome/model/entity/user.go:29
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:39:47 E:/code/go/ginDome/model/entity/user.go:64
+[0.000ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:39:51 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:39:51 E:/code/go/ginDome/model/entity/user.go:64
+[0.000ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:41:01 E:/code/go/ginDome/model/entity/user.go:29
+[0.655ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:41:01 E:/code/go/ginDome/model/entity/user.go:64
+[0.516ms] [rows:1] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND `gd_user`.`deleted_at` IS NULL LIMIT 10
+
+2023/09/24 20:41:08 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:41:08 E:/code/go/ginDome/model/entity/user.go:64
+[0.550ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%john_doe%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:41:23 E:/code/go/ginDome/model/entity/user.go:29
+[0.509ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:41:23 E:/code/go/ginDome/model/entity/user.go:64
+[0.000ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:41:28 E:/code/go/ginDome/model/entity/user.go:29
+[0.612ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:41:28 E:/code/go/ginDome/model/entity/user.go:64
+[0.518ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:42:54 E:/code/go/ginDome/model/entity/user.go:29
+[0.514ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:43:07 E:/code/go/ginDome/model/entity/user.go:29
+[0.513ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:43:28 E:/code/go/ginDome/model/entity/user.go:29
+[0.703ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:46:28 E:/code/go/ginDome/model/entity/user.go:29
+[0.012ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:46:28 E:/code/go/ginDome/model/entity/user.go:64
+[0.617ms] [rows:0] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 20:46:36 E:/code/go/ginDome/model/entity/user.go:29
+[0.511ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:46:36 E:/code/go/ginDome/model/entity/user.go:64
+[0.618ms] [rows:1] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND `gd_user`.`deleted_at` IS NULL LIMIT 10
+
+2023/09/24 20:46:45 E:/code/go/ginDome/model/entity/user.go:29
+[0.567ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 20:46:45 E:/code/go/ginDome/model/entity/user.go:64
+[0.503ms] [rows:1] SELECT * FROM `gd_user` WHERE user_name like '%admin%' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc,phone desc LIMIT 10
+
+2023/09/24 22:51:48 E:/code/go/ginDome/model/entity/user.go:33 Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'created_time' at row 1
+[1.212ms] [rows:0] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'john_doe','5ec9a12a3992ea33bf7dfe6077e5e1e2','John','12345678901','',1,'yaisdha@gmail.com',0,'ashdgjasdf',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)
+
+2023/09/24 22:53:50 E:/code/go/ginDome/model/entity/user.go:33 Error 1292 (22007): Incorrect datetime value: '0000-00-00' for column 'created_time' at row 1
+[1.026ms] [rows:0] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'john_doe','5ec9a12a3992ea33bf7dfe6077e5e1e2','John','12345678901','',1,'yaisdha@gmail.com',0,'ashdgjasdf',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)
+
+2023/09/24 22:56:23 E:/code/go/ginDome/model/entity/user.go:33 SLOW SQL >= 50ms
+[117.523ms] [rows:1] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'john_doe','5ec9a12a3992ea33bf7dfe6077e5e1e2','John','12345678901','',1,'yaisdha@gmail.com',0,'ashdgjasdf',0,'2023-09-24 22:56:23.226','2023-09-24 22:56:23.226',0,'','',NULL)
+
+2023/09/24 23:03:00 E:/code/go/ginDome/model/entity/user.go:29
+[0.528ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:03:44 E:/code/go/ginDome/model/entity/user.go:29
+[0.516ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:05:18 E:/code/go/ginDome/model/entity/user.go:29
+[0.652ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:05:29 E:/code/go/ginDome/model/entity/user.go:29
+[0.517ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:05:29 E:/code/go/ginDome/model/entity/user.go:64
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE user_name like '%john_doe%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc LIMIT 10
+
+2023/09/24 23:07:37 E:/code/go/ginDome/model/entity/user.go:29
+[0.601ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:07:42 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:07:42 E:/code/go/ginDome/model/entity/user.go:64
+[0.658ms] [rows:1] SELECT * FROM `gd_user` WHERE user_name like '%john_doe%' AND nick_name like '%John%' AND phone = '12345678901' AND `gd_user`.`deleted_at` IS NULL ORDER BY user_name asc,nick_name desc LIMIT 10
+
+2023/09/24 23:07:55 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:07:55 E:/code/go/ginDome/model/entity/user.go:37 WHERE conditions required
+[0.000ms] [rows:0] UPDATE `gd_user` SET `deleted_at`='2023-09-24 23:07:55.675' WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:08:57 E:/code/go/ginDome/model/entity/user.go:29
+[0.685ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:08:57 E:/code/go/ginDome/model/entity/user.go:37 WHERE conditions required
+[0.000ms] [rows:0] UPDATE `gd_user` SET `deleted_at`='2023-09-24 23:08:57.152' WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:12:51 E:/code/go/ginDome/model/entity/user.go:29
+[0.706ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:12:51 E:/code/go/ginDome/model/entity/user.go:37 SLOW SQL >= 50ms
+[59.520ms] [rows:1] UPDATE `gd_user` SET `deleted_at`='2023-09-24 23:12:51.617' WHERE user_id = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:13:23 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:13:39 E:/code/go/ginDome/model/entity/user.go:29
+[0.515ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:13:48 E:/code/go/ginDome/model/entity/user.go:29
+[0.519ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:14:06 E:/code/go/ginDome/model/entity/user.go:29
+[0.588ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:14:06 E:/code/go/ginDome/model/entity/user.go:64
+[0.000ms] [rows:2] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL LIMIT 10
+
+2023/09/24 23:14:24 E:/code/go/ginDome/model/entity/user.go:29
+[0.000ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:24:20 E:/code/go/ginDome/model/entity/user.go:29
+[0.512ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:28:05 E:/code/go/ginDome/model/entity/user.go:29
+[0.660ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'test' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:28:23 E:/code/go/ginDome/model/entity/user.go:29
+[0.518ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'john_doe' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:28:53 E:/code/go/ginDome/model/entity/user.go:29
+[0.520ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'john_doe' AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:29:38 E:/code/go/ginDome/model/entity/user.go:29
+[0.577ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:30:34 E:/code/go/ginDome/model/entity/user.go:29
+[1.028ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:31:44 E:/code/go/ginDome/model/entity/user.go:29
+[1.030ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:32:17 E:/code/go/ginDome/model/entity/user.go:29
+[1.033ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:33:25 E:/code/go/ginDome/model/entity/user.go:29
+[1.031ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:34:07 E:/code/go/ginDome/model/entity/user.go:29
+[0.591ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:34:31 E:/code/go/ginDome/model/entity/user.go:29
+[0.706ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:34:37 E:/code/go/ginDome/model/entity/user.go:29
+[0.504ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:34:51 E:/code/go/ginDome/model/entity/user.go:29
+[0.520ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:34:51 E:/code/go/ginDome/model/entity/user.go:41 WHERE conditions required
+[0.517ms] [rows:0] UPDATE `gd_user` SET `user_id`=3,`user_name`='john_does',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='does',`phone`='17251560913',`avatar`='/file/img/sajdg.jpg',`sex`=2,`email`='12356456123@qq.com',`status`=0,`remark`='tq1a12',`modifier`=0,`created_time`='2023-09-24 22:56:23',`modified_time`='2023-09-24 22:56:23',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:35:43 E:/code/go/ginDome/model/entity/user.go:29
+[0.675ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:35:43 E:/code/go/ginDome/model/entity/user.go:41
+[27.802ms] [rows:1] UPDATE `gd_user` SET `user_id`=3,`user_name`='john_does',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='does',`phone`='17251560913',`avatar`='/file/img/sajdg.jpg',`sex`=2,`email`='12356456123@qq.com',`status`=0,`remark`='tq1a12',`modifier`=0,`created_time`='2023-09-24 22:56:23',`modified_time`='2023-09-24 22:56:23',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE user_id = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:37:35 E:/code/go/ginDome/model/entity/user.go:29
+[0.512ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:37:35 E:/code/go/ginDome/model/entity/user.go:41
+[0.588ms] [rows:0] UPDATE `gd_user` SET `user_id`=3,`user_name`='john_does',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='does',`phone`='17251560913',`avatar`='/file/img/sajdg.jpg',`sex`=2,`email`='12356456123@qq.com',`status`=0,`remark`='tq1a12',`modifier`=0,`created_time`='2023-09-24 22:56:23',`modified_time`='2023-09-24 22:56:23',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE user_id = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:37:35 E:/code/go/ginDome/model/entity/user.go:41
+[0.513ms] [rows:0] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (3,'john_does','e10adc3949ba59abbe56e057f20f883e','does','17251560913','/file/img/sajdg.jpg',2,'12356456123@qq.com',0,'tq1a12',0,'2023-09-24 22:56:23','2023-09-24 22:56:23',0,'','',NULL) ON DUPLICATE KEY UPDATE `user_id`=VALUES(`user_id`),`user_name`=VALUES(`user_name`),`password`=VALUES(`password`),`nick_name`=VALUES(`nick_name`),`phone`=VALUES(`phone`),`avatar`=VALUES(`avatar`),`sex`=VALUES(`sex`),`email`=VALUES(`email`),`status`=VALUES(`status`),`remark`=VALUES(`remark`),`modifier`=VALUES(`modifier`),`created_time`=VALUES(`created_time`),`modified_time`=VALUES(`modified_time`),`creater`=VALUES(`creater`),`modifier_name`=VALUES(`modifier_name`),`creater_name`=VALUES(`creater_name`),`deleted_at`=VALUES(`deleted_at`)
+
+2023/09/24 23:37:46 E:/code/go/ginDome/model/entity/user.go:29
+[1.042ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:37:46 E:/code/go/ginDome/model/entity/user.go:41 SLOW SQL >= 50ms
+[56.777ms] [rows:1] UPDATE `gd_user` SET `user_id`=3,`user_name`='john_doe',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='does',`phone`='17251560913',`avatar`='/file/img/sajdg.jpg',`sex`=2,`email`='12356456123@qq.com',`status`=0,`remark`='tq1a12',`modifier`=0,`created_time`='2023-09-24 22:56:23',`modified_time`='2023-09-24 22:56:23',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE user_id = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:37:57 E:/code/go/ginDome/model/entity/user.go:29
+[0.980ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2023/09/24 23:37:57 E:/code/go/ginDome/model/entity/user.go:41
+[21.182ms] [rows:1] UPDATE `gd_user` SET `user_id`=3,`user_name`='john_doe',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='john',`phone`='17251560913',`avatar`='/file/img/sajdg.jpg',`sex`=2,`email`='12356456123@qq.com',`status`=0,`remark`='tq1a12',`modifier`=0,`created_time`='2023-09-24 22:56:23',`modified_time`='2023-09-24 22:56:23',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE user_id = 3 AND `gd_user`.`deleted_at` IS NULL
