@@ -113,6 +113,15 @@ create table `gd_menu_permissions`(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜单-权限';
 
 /*
+*  菜单-权限
+*/
+create table `gd_menu_role`(
+   `menu_id` bigint(20) unsigned NOT NULL COMMENT'菜单ID',
+   `role_id` bigint(20) unsigned NOT NULL COMMENT'角色ID',
+    PRIMARY KEY (`role_id`,`menu_id`) USING BTREE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='角色-权限';
+
+/*
  * casbin 表
  */
  CREATE TABLE `gd_casbin_rule` (

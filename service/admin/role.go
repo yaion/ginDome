@@ -6,9 +6,9 @@ import (
 	"net/http"
 )
 
-func CreateMenu(menu *entity.Menu) dto.JsonResult {
+func CreateRole(role *entity.Role) dto.JsonResult {
 	result := dto.JsonResult{}
-	err := menu.Create()
+	err := role.Create()
 	if err != nil {
 		//todo 记录日志
 		result.Code = http.StatusInternalServerError
@@ -22,9 +22,10 @@ func CreateMenu(menu *entity.Menu) dto.JsonResult {
 	return result
 }
 
-func UpdateMenu(menu *entity.Menu) dto.JsonResult {
+func DeleteRole(roles *[]entity.Role) dto.JsonResult {
 	result := dto.JsonResult{}
-	err := menu.Update()
+	role := entity.Role{}
+	err := role.Del(roles)
 	if err != nil {
 		//todo 记录日志
 		result.Code = http.StatusInternalServerError
@@ -38,10 +39,9 @@ func UpdateMenu(menu *entity.Menu) dto.JsonResult {
 	return result
 }
 
-func DeleteMenu(menus *[]entity.Menu) dto.JsonResult {
+func UpdateRole(role *entity.Role) dto.JsonResult {
 	result := dto.JsonResult{}
-	menu := entity.Menu{}
-	err := menu.Del(menus)
+	err := role.Update()
 	if err != nil {
 		//todo 记录日志
 		result.Code = http.StatusInternalServerError
@@ -55,10 +55,10 @@ func DeleteMenu(menus *[]entity.Menu) dto.JsonResult {
 	return result
 }
 
-func ListMenu(params *dto.MenuListParams) dto.JsonResult {
-	result := dto.JsonResult{}
-	menu := entity.Menu{}
-	list, err := menu.List(params)
+func ListRole(params *dto.ListRoleParams) dto.JsonResult {
+	var result dto.JsonResult
+	role := entity.Role{}
+	list, err := role.List(params)
 	if err != nil {
 		//todo 记录日志
 		result.Code = http.StatusInternalServerError
@@ -70,4 +70,12 @@ func ListMenu(params *dto.MenuListParams) dto.JsonResult {
 	result.Msg = "success"
 	result.Data = list
 	return result
+}
+
+func LinkUser() {
+
+}
+
+func LinkPermissions() {
+
 }
