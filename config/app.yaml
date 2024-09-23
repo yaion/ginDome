@@ -2,17 +2,17 @@
 app:
   app_name: gin-demo
   version: v1.0.0
-  addr: 0.0.0.0:80
+  addr: 0.0.0.0:2024
   env: debug  # debug开发 release 生产 test测试 模式
   cron: false # 是否启用定时任务 true false
 
 # mysql 信息
 mysql:
-  host: 127.0.0.1
+  host: 192.168.232.136
   port: 3306
   user: root
-  password: root
-  database: gin-demo
+  password: password
+  database: ginDemo
   charset: utf8mb4 # 要支持完整的UTF-8编码,需设置成: utf8mb4
   parseTime: true # 解析time.Time类型
   timeZone: Local # 时区,若设置 Asia/Shanghai,需写成: Asia%2fShanghai

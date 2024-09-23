@@ -3,7 +3,7 @@ package dto
 type LoginParams struct {
 	Name      string `json:"name" validate:"required,min=3,max=32"`
 	Password  string `json:"password" validate:"required,min=6,max=32"`
-	CaptchaId string `json:"captcha_id" validate:"required,len=8"`
+	CaptchaId string `json:"captcha_id" validate:"required"`
 	Verify    string `json:"verify" validate:"required"`
 }
 
@@ -48,6 +48,7 @@ type UserSort struct {
 	UserName string `json:"user_name" validate:"omitempty,oneof=asc desc"`
 	NickName string `json:"nick_name" validate:"omitempty,oneof=asc desc"`
 	Phone    string ` json:"phone" validate:"omitempty,oneof=asc desc"`
+	Id       string `json:"id" validate:"omitempty,oneof=asc desc"`
 }
 
 // JsonResult json回参

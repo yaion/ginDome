@@ -3,9 +3,9 @@ package admin
 import (
 	"ginDome/global"
 	"ginDome/model/entity"
-	"ginDome/router"
 	"ginDome/service/admin"
 	"ginDome/service/admin/dto"
+	"ginDome/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -32,7 +32,7 @@ func CreatePermissions(ctx *gin.Context) {
 	permission := entity.Permissions{}
 	permission.PermissionsName = params.PermissionsName
 	permission.Status = 1
-	routerData, err := router.GetRouterData("params.Path")
+	routerData, err := utils.GetRouterData("params.Path")
 	if err != nil {
 		//todo 记录日志
 		ctx.JSONP(http.StatusInternalServerError, gin.H{"msg": "Please enter correct parameters path!"})
@@ -72,7 +72,7 @@ func UpdatePermissions(ctx *gin.Context) {
 	permission.PermissionsId = params.PermissionsId
 	permission.PermissionsName = params.PermissionsName
 	permission.Status = params.Status
-	routerData, err := router.GetRouterData("params.Path")
+	routerData, err := utils.GetRouterData("params.Path")
 	if err != nil {
 		//todo 记录日志
 		ctx.JSONP(http.StatusInternalServerError, gin.H{"msg": "Please enter correct parameters path!"})

@@ -13,7 +13,12 @@ func Login(params *dto.LoginParams) dto.JsonResult {
 	var data dto.LoginBack
 	var result dto.JsonResult
 	var err error
-	// 验证验证码 todo
+	// 验证验证码
+	if ok := utils.Verify(params.CaptchaId, params.Verify); !ok {
+		result.Code = http.StatusInternalServerError
+		result.Msg = "verify is error,please try again!"
+		return result
+	}
 	//验证密码
 	user := entity.User{UserName: params.Name}
 	err = user.GetUserOne()
@@ -35,7 +40,6 @@ func Login(params *dto.LoginParams) dto.JsonResult {
 		result.Msg = "System error please try again!"
 		return result
 	}
-	data.Msg = "login success!"
 	result.Code = http.StatusOK
 	result.Msg = "success"
 	result.Data = data
@@ -73,6 +77,7 @@ func UserList(params *dto.UserListParams) *dto.JsonResult {
 	users, err := user.GetUserList(params)
 	if err != nil {
 		//记录日志 todo
+		fmt.Println(err.Error())
 		//global.GvaLogger.Error("error",zap.)
 		result.Code = 4001
 		result.Msg = "System error please try again!"
@@ -116,9 +121,4 @@ func UpdateUser(user *entity.User) *dto.JsonResult {
 	result.Msg = "update success！"
 	result.Data = nil
 	return &result
-}
-
-// Verify 验证码 生产验证码放回 todo
-func Verify() {
-
 }

@@ -1,8 +1,8 @@
 package router
 
 import (
-	"errors"
 	admin "ginDome/api/admin"
+	"ginDome/api/common"
 	"ginDome/router/middleware"
 	"ginDome/service"
 	"github.com/gin-gonic/gin"
@@ -68,7 +68,7 @@ func InitRouter(e *gin.Engine) {
 	}
 
 	//验证码
-	e.GET("verify", service.Verify)
+	e.GET("verify", common.Verify)
 	//上传文件
 	up := e.Group("upload")
 	{
@@ -82,33 +82,4 @@ type RouterData struct {
 	Handle string
 	Path   string
 	Action string
-}
-
-func GetRouterData(path string) (RouterData, error) {
-	routerData := make(map[string]RouterData)
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	v, ok := routerData[path]
-	if !ok {
-		return v, errors.New("not have this router")
-	}
-	return v, nil
 }

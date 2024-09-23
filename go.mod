@@ -3,6 +3,7 @@ module ginDome
 go 1.20
 
 require (
+	github.com/dchest/captcha v1.0.0
 	github.com/fsnotify/fsnotify v1.6.0
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-playground/validator/v10 v10.14.0
@@ -13,6 +14,7 @@ require (
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/spf13/viper v1.16.0
 	go.uber.org/zap v1.21.0
+	golang.org/x/image v0.0.0-20190802002840-cff245a6509b
 	gorm.io/driver/mysql v1.5.1
 	gorm.io/gorm v1.25.2
 )

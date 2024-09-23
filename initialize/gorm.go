@@ -11,7 +11,7 @@ import (
 	"os"
 )
 
-func InitGorm(){
+func InitGorm() {
 	mysqlConfig := global.GvaConfig.Mysql
 	// user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=%s&parseTime=%t&loc=%s",

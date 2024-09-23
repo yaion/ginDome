@@ -1,8 +1,12 @@
 package utils
 
 import (
+	"bytes"
 	"crypto/md5"
+	"encoding/base64"
+	"errors"
 	"fmt"
+	"github.com/dchest/captcha"
 	"os"
 )
 
@@ -34,7 +38,7 @@ type RouterData struct {
 	Action string
 }
 
-func GetRouterData(path string) map[string]RouterData {
+func GetRouterData(path string) (RouterData, error) {
 	routerData := make(map[string]RouterData)
 	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
 	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
@@ -56,5 +60,25 @@ func GetRouterData(path string) map[string]RouterData {
 	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
 	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
 	routerData["/v1/user/login"] = RouterData{"admin.user.login", "/v1/user/login", "POST"}
-	return routerData
+	v, ok := routerData[path]
+	if !ok {
+		return v, errors.New("not have this router")
+	}
+	return v, nil
+}
+
+func CreateVerifyImg(height, width int) (map[string]string, error) {
+	verify := make(map[string]string)
+	verify["id"] = captcha.New()
+	var buffer bytes.Buffer
+	err := captcha.WriteImage(&buffer, verify["id"], width, height)
+	if err != nil {
+		return verify, err
+	}
+	verify["img"] = base64.StdEncoding.EncodeToString(buffer.Bytes())
+	return verify, nil
+}
+
+func Verify(id, digits string) bool {
+	return captcha.VerifyString(id, digits)
 }

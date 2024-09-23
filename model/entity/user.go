@@ -41,8 +41,11 @@ func (user *User) Update() error {
 	return global.GvaMysqlClient.Where("status = 1 user_id = ? ", user.UserId).Save(user).Error
 }
 
-func (user *User) GetUserList(params *dto.UserListParams) ([]User, error) {
+func (user *User) GetUserList(params *dto.UserListParams) (*map[string]interface{}, error) {
 	var users []User
+	var total int64
+	var err error
+	result := make(map[string]interface{})
 	db := global.GvaMysqlClient
 	if params.UserName != "" {
 		db = db.Where("user_name like ?", "%"+params.UserName+"%")
@@ -63,10 +66,22 @@ func (user *User) GetUserList(params *dto.UserListParams) ([]User, error) {
 	if params.Sort.Phone != "" {
 		db = db.Order(fmt.Sprintf("phone %s", params.Sort.Phone))
 	}
-	db = db.Offset(int((params.Page - 1) * params.PageSize)).Limit(int(params.Page * params.PageSize))
-	err := db.Find(&users).Error
+	if params.Sort.Id != "" {
+		db = db.Order(fmt.Sprintf("user_id %s", params.Sort.Id))
+	}
+	// todo 优化
+	err = db.Table(user.TableName()).Where("deleted_at is null").Count(&total).Error
 	if err != nil {
 		return nil, err
 	}
-	return users, nil
+	db = db.Offset(int((params.Page - 1) * params.PageSize)).Limit(int(params.Page * params.PageSize))
+	err = db.Find(&users).Error
+	if err != nil {
+		return nil, err
+	}
+	result["list"] = users
+	result["total"] = total
+	result["page"] = params.Page
+	result["page_size"] = params.PageSize
+	return &result, nil
 }
