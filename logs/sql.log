@@ -958,3 +958,78 @@
 
 2024/09/23 18:37:40 D:/codes/ginDemo/model/entity/user.go:33
 [3.362ms] [rows:1] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'2.5year','b6b33fd90f880021b2eff4fdded65817','cxk','17283193111','',0,'cxk@123.com',0,'',0,'2024-09-23 18:37:40.205','2024-09-23 18:37:40.205',0,'','',NULL)
+
+2024/09/24 11:25:26 D:/codes/ginDemo/model/entity/user.go:29
+[1.987ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = '2.5year' AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:31:31 D:/codes/ginDemo/model/entity/user.go:29
+[0.993ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = '2.5year' AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:31:43 D:/codes/ginDemo/model/entity/user.go:29
+[0.831ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 4 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:31:43 D:/codes/ginDemo/model/entity/user.go:37
+[1.986ms] [rows:1] UPDATE `gd_user` SET `deleted_at`='2024-09-24 11:31:43.677' WHERE user_id = 4 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:32:01 D:/codes/ginDemo/model/entity/user.go:29
+[0.790ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:32:01 D:/codes/ginDemo/model/entity/user.go:73
+[0.510ms] [rows:1] SELECT count(*) FROM `gd_user` WHERE deleted_at is null
+
+2024/09/24 11:32:01 D:/codes/ginDemo/model/entity/user.go:78
+[0.000ms] [rows:2] SELECT * FROM `gd_user` WHERE deleted_at is null AND `gd_user`.`deleted_at` IS NULL ORDER BY phone desc LIMIT 10
+
+2024/09/24 11:34:36 D:/codes/ginDemo/model/entity/user.go:29
+[0.837ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:34:47 D:/codes/ginDemo/model/entity/user.go:29
+[0.994ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:34:47 D:/codes/ginDemo/model/entity/user.go:73
+[0.497ms] [rows:1] SELECT count(*) FROM `gd_user` WHERE deleted_at is null
+
+2024/09/24 11:34:47 D:/codes/ginDemo/model/entity/user.go:78
+[0.000ms] [rows:2] SELECT * FROM `gd_user` WHERE deleted_at is null AND `gd_user`.`deleted_at` IS NULL ORDER BY phone desc LIMIT 10
+
+2024/09/24 11:47:17 D:/codes/ginDemo/model/entity/user.go:29
+[0.993ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:48:03 D:/codes/ginDemo/model/entity/user.go:29
+[0.992ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:48:12 D:/codes/ginDemo/model/entity/user.go:29
+[0.497ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:48:12 D:/codes/ginDemo/model/entity/user.go:41 Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id = ?  AND `gd_user`.`deleted_at` IS NULL' at line 1
+[0.497ms] [rows:0] UPDATE `gd_user` SET `user_id`=2,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='12348657956',`avatar`='/sss/ss.png',`sex`=1,`email`='tasgdjah@asg.com',`status`=1,`remark`='this is admin!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1 user_id = 2  AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:50:26 D:/codes/ginDemo/model/entity/user.go:29
+[0.994ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:50:26 D:/codes/ginDemo/model/entity/user.go:41 Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id = ?  AND `gd_user`.`deleted_at` IS NULL' at line 1
+[0.993ms] [rows:0] UPDATE `gd_user` SET `user_id`=2,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='12348657956',`avatar`='/sss/ss.png',`sex`=1,`email`='tasgdjah@asg.com',`status`=1,`remark`='this is admin!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1 user_id = 2  AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:50:36 D:/codes/ginDemo/model/entity/user.go:29
+[0.997ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:50:36 D:/codes/ginDemo/model/entity/user.go:41 Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id = ?  AND `gd_user`.`deleted_at` IS NULL' at line 1
+[0.496ms] [rows:0] UPDATE `gd_user` SET `user_id`=2,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='12348657956',`avatar`='/sss/ss.png',`sex`=1,`email`='tasgdjah@asg.com',`status`=1,`remark`='this is admin!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1 user_id = 2  AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:55:12 D:/codes/ginDemo/model/entity/user.go:30
+[1.490ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:55:12 D:/codes/ginDemo/model/entity/user.go:43 Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id = ?  AND `gd_user`.`deleted_at` IS NULL' at line 1
+[0.497ms] [rows:0] UPDATE `gd_user` SET `user_id`=2,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='12348657956',`avatar`='/sss/ss.png',`sex`=1,`email`='tasgdjah@asg.com',`status`=1,`remark`='this is admin!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1 user_id = 2  AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:55:18 D:/codes/ginDemo/model/entity/user.go:30
+[0.497ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:55:18 D:/codes/ginDemo/model/entity/user.go:43 Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user_id = ?  AND `gd_user`.`deleted_at` IS NULL' at line 1
+[0.496ms] [rows:0] UPDATE `gd_user` SET `user_id`=2,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='12348657956',`avatar`='/sss/ss.png',`sex`=1,`email`='tasgdjah@asg.com',`status`=1,`remark`='this is admin!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1 user_id = 2  AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:57:58 D:/codes/ginDemo/model/entity/user.go:29
+[0.994ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 2 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/09/24 11:57:58 D:/codes/ginDemo/model/entity/user.go:41 Error 1062 (23000): Duplicate entry '2' for key 'gd_user.PRIMARY'
+[2.485ms] [rows:0] UPDATE `gd_user` SET `user_id`=2,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='12348657956',`avatar`='/sss/ss.png',`sex`=1,`email`='tasgdjah@asg.com',`status`=1,`remark`='this is admin!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1  AND `gd_user`.`deleted_at` IS NULL

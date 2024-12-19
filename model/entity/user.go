@@ -38,7 +38,7 @@ func (user *User) Delete() error {
 }
 
 func (user *User) Update() error {
-	return global.GvaMysqlClient.Where("status = 1 user_id = ? ", user.UserId).Save(user).Error
+	return global.GvaMysqlClient.Where("status = 1 ").Save(user).Error
 }
 
 func (user *User) GetUserList(params *dto.UserListParams) (*map[string]interface{}, error) {

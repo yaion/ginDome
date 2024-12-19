@@ -33,15 +33,15 @@ type UserListParams struct {
 }
 
 type UpdateUserParams struct {
-	UserName string `json:"user_name" validate:"required,min=3,max=32"`
-	Password string `json:"password" validate:"required,min=6,max=32"`
-	NickName string `json:"nick_name" validate:"required,min=3,max=128"`
-	Phone    string ` json:"phone" validate:"required,len=11"`
-	Avatar   string `json:"avatar" validate:"required"`
-	Sex      uint8  `json:"sex" validate:"required"`
-	Status   uint8  `json:"status" validate:"required"`
-	Email    string `json:"email" validate:"required,email"`
-	Remark   string `json:"remark" validate:"required"`
+	UserName string `json:"user_name" validate:"min=3,max=32"`
+	Password string `json:"password" validate:"min=6,max=32"`
+	NickName string `json:"nick_name" validate:"min=3,max=128"`
+	Phone    string ` json:"phone" validate:"len=11"`
+	Avatar   string `json:"avatar" validate:""`
+	Sex      uint8  `json:"sex" validate:""`
+	Status   uint8  `json:"status" validate:""`
+	Email    string `json:"email" validate:"email"`
+	Remark   string `json:"remark" validate:""`
 }
 
 type UserSort struct {

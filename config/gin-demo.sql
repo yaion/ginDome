@@ -146,7 +146,7 @@ CREATE TABLE `gd_user`  (
   `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '头像',
   `sex` tinyint(1) NULL DEFAULT NULL COMMENT '性别',
   `email` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '邮箱',
-  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1启用 0停用',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '状态：1启用 2停用',
   `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '备注',
   `modifier` bigint(20) NOT NULL DEFAULT 0 COMMENT '修改人id',
   `created_time` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',

@@ -87,15 +87,36 @@ func UpdateUser(ctx *gin.Context) {
 		ctx.JSONP(http.StatusInternalServerError, gin.H{"error": "系统错误"})
 		return
 	}
+	param := make(map[string]interface{})
 	// 先设置为必填，以后有需要在做判断
-	user.UserName = params.UserName
-	user.Password = utils.Md5str(params.Password)
-	user.NickName = params.NickName
-	user.Phone = params.Phone
-	user.Avatar = params.Avatar
-	user.Sex = params.Sex
-	user.Email = params.Email
-	user.Status = params.Status
-	user.Remark = params.Remark
+	if params.UserName != "" {
+		//user.UserName = params.UserName
+		param["user_name"] = params.UserName
+	}
+	if params.Password != "" {
+		//user.Password = utils.Md5str(params.Password)
+		param["password"] = params.Password
+	}
+	if params.NickName != "" {
+		user.NickName = params.NickName
+	}
+	if params.Phone != "" {
+		user.Phone = params.Phone
+	}
+	if params.Avatar != "" {
+		user.Avatar = params.Avatar
+	}
+	if params.Sex != 0 {
+		user.Sex = params.Sex
+	}
+	if params.Email != "" {
+		user.Email = params.Email
+	}
+	if params.Status != 0 {
+		user.Status = params.Status
+	}
+	if params.Remark != "" {
+		user.Remark = params.Remark
+	}
 	ctx.JSONP(http.StatusOK, admin.UpdateUser(user))
 }
