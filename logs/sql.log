@@ -1033,3 +1033,138 @@
 
 2024/09/24 11:57:58 D:/codes/ginDemo/model/entity/user.go:41 Error 1062 (23000): Duplicate entry '2' for key 'gd_user.PRIMARY'
 [2.485ms] [rows:0] UPDATE `gd_user` SET `user_id`=2,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='12348657956',`avatar`='/sss/ss.png',`sex`=1,`email`='tasgdjah@asg.com',`status`=1,`remark`='this is admin!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1  AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 16:29:34 D:/codes/ginDemo/model/entity/user.go:29
+[1.169ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 16:29:52 D:/codes/ginDemo/model/entity/user.go:29
+[0.875ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 16:30:08 D:/codes/ginDemo/model/entity/user.go:29
+[0.615ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 16:30:08 D:/codes/ginDemo/model/entity/user.go:73
+[0.597ms] [rows:1] SELECT count(*) FROM `gd_user` WHERE deleted_at is null
+
+2024/12/19 16:30:08 D:/codes/ginDemo/model/entity/user.go:78
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE deleted_at is null AND `gd_user`.`deleted_at` IS NULL ORDER BY phone desc LIMIT 10
+
+2024/12/19 16:30:16 D:/codes/ginDemo/model/entity/user.go:33
+[7.500ms] [rows:1] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'2.5year','b6b33fd90f880021b2eff4fdded65817','cxk','17283193111','',0,'cxk@123.com',0,'',0,'2024-12-19 16:30:16.315','2024-12-19 16:30:16.315',0,'','',NULL)
+
+2024/12/19 16:30:20 D:/codes/ginDemo/model/entity/user.go:29
+[0.724ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 16:30:20 D:/codes/ginDemo/model/entity/user.go:73
+[0.000ms] [rows:1] SELECT count(*) FROM `gd_user` WHERE deleted_at is null
+
+2024/12/19 16:30:20 D:/codes/ginDemo/model/entity/user.go:78
+[1.026ms] [rows:2] SELECT * FROM `gd_user` WHERE deleted_at is null AND `gd_user`.`deleted_at` IS NULL ORDER BY phone desc LIMIT 10
+
+2024/12/19 18:27:17 D:/codes/ginDemo/model/entity/user.go:29
+[0.605ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:27:17 D:/codes/ginDemo/model/entity/user.go:73
+[0.551ms] [rows:1] SELECT count(*) FROM `gd_user` WHERE deleted_at is null
+
+2024/12/19 18:27:17 D:/codes/ginDemo/model/entity/user.go:78
+[0.000ms] [rows:2] SELECT * FROM `gd_user` WHERE deleted_at is null AND `gd_user`.`deleted_at` IS NULL ORDER BY phone desc LIMIT 10
+
+2024/12/19 18:27:24 D:/codes/ginDemo/model/entity/user.go:29
+[0.649ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:27:24 D:/codes/ginDemo/model/entity/user.go:73
+[0.694ms] [rows:1] SELECT count(*) FROM `gd_user` WHERE deleted_at is null
+
+2024/12/19 18:27:24 D:/codes/ginDemo/model/entity/user.go:78
+[0.000ms] [rows:2] SELECT * FROM `gd_user` WHERE deleted_at is null AND `gd_user`.`deleted_at` IS NULL ORDER BY phone desc LIMIT 10
+
+2024/12/19 18:30:25 D:/codes/ginDemo/model/entity/user.go:29
+[0.769ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:30:44 D:/codes/ginDemo/model/entity/user.go:29
+[0.508ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:30:44 D:/codes/ginDemo/model/entity/user.go:29
+[0.564ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 4 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:30:44 D:/codes/ginDemo/model/entity/user.go:41 Error 1062 (23000): Duplicate entry '4' for key 'gd_user.PRIMARY'
+[13.835ms] [rows:0] UPDATE `gd_user` SET `user_id`=4,`user_name`='tom',`password`='2b2ebb54b8fbf58caee1a8247fa53b7e',`nick_name`='cat',`phone`='76234619342',`avatar`='',`sex`=1,`email`='ajsgdhajk@sdau.com',`status`=1,`remark`='this a cat ,name is tom!',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE status = 1  AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:34:04 D:/codes/ginDemo/model/entity/user.go:29
+[1.039ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:34:05 D:/codes/ginDemo/model/entity/user.go:29
+[0.525ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 4 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:34:05 D:/codes/ginDemo/model/entity/user.go:41
+[5.563ms] [rows:0] UPDATE `gd_user` SET `user_id`=4,`user_name`='tom',`password`='2b2ebb54b8fbf58caee1a8247fa53b7e',`nick_name`='cat',`phone`='76234619342',`avatar`='',`sex`=1,`email`='ajsgdhajk@sdau.com',`status`=1,`remark`='this a cat ,name is tom!',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE status = 1  AND user_id = 4 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:34:05 D:/codes/ginDemo/model/entity/user.go:41
+[7.282ms] [rows:2] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (4,'tom','2b2ebb54b8fbf58caee1a8247fa53b7e','cat','76234619342','',1,'ajsgdhajk@sdau.com',1,'this a cat ,name is tom!',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL) ON DUPLICATE KEY UPDATE `user_id`=VALUES(`user_id`),`user_name`=VALUES(`user_name`),`password`=VALUES(`password`),`nick_name`=VALUES(`nick_name`),`phone`=VALUES(`phone`),`avatar`=VALUES(`avatar`),`sex`=VALUES(`sex`),`email`=VALUES(`email`),`status`=VALUES(`status`),`remark`=VALUES(`remark`),`modifier`=VALUES(`modifier`),`created_time`=VALUES(`created_time`),`modified_time`=VALUES(`modified_time`),`creater`=VALUES(`creater`),`modifier_name`=VALUES(`modifier_name`),`creater_name`=VALUES(`creater_name`),`deleted_at`=VALUES(`deleted_at`)
+
+2024/12/19 18:34:27 D:/codes/ginDemo/model/entity/user.go:29
+[0.932ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:35:55 D:/codes/ginDemo/model/entity/user.go:29
+[1.017ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:35:55 D:/codes/ginDemo/model/entity/user.go:29
+[0.585ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 4 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:35:55 D:/codes/ginDemo/model/entity/user.go:41
+[7.122ms] [rows:1] UPDATE `gd_user` SET `user_id`=4,`user_name`='tom',`password`='2b2ebb54b8fbf58caee1a8247fa53b7e',`nick_name`='cat',`phone`='76234619342',`avatar`='',`sex`=1,`email`='ajsgdhajk@sdau.com',`status`=2,`remark`='this a cat ,name is tom!',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE status = 1  AND user_id = 4 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:14 D:/codes/ginDemo/model/entity/user.go:29
+[1.146ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:14 D:/codes/ginDemo/model/entity/user.go:29
+[0.583ms] [rows:0] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 4 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:14 D:/codes/ginDemo/model/entity/user.go:41
+[2.658ms] [rows:0] UPDATE `gd_user` SET `user_id`=4,`user_name`='tom',`password`='2b2ebb54b8fbf58caee1a8247fa53b7e',`nick_name`='cat',`phone`='27102371721',`avatar`='',`sex`=1,`email`='ajsgdhajk@sdau.com',`status`=1,`remark`='this a cat ,name is tom!',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE status = 1  AND user_id = 4 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:14 D:/codes/ginDemo/model/entity/user.go:41
+[6.144ms] [rows:2] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (4,'tom','2b2ebb54b8fbf58caee1a8247fa53b7e','cat','27102371721','',1,'ajsgdhajk@sdau.com',1,'this a cat ,name is tom!',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL) ON DUPLICATE KEY UPDATE `user_id`=VALUES(`user_id`),`user_name`=VALUES(`user_name`),`password`=VALUES(`password`),`nick_name`=VALUES(`nick_name`),`phone`=VALUES(`phone`),`avatar`=VALUES(`avatar`),`sex`=VALUES(`sex`),`email`=VALUES(`email`),`status`=VALUES(`status`),`remark`=VALUES(`remark`),`modifier`=VALUES(`modifier`),`created_time`=VALUES(`created_time`),`modified_time`=VALUES(`modified_time`),`creater`=VALUES(`creater`),`modifier_name`=VALUES(`modifier_name`),`creater_name`=VALUES(`creater_name`),`deleted_at`=VALUES(`deleted_at`)
+
+2024/12/19 18:36:31 D:/codes/ginDemo/model/entity/user.go:29
+[0.677ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:31 D:/codes/ginDemo/model/entity/user.go:41
+[7.635ms] [rows:1] UPDATE `gd_user` SET `user_id`=3,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='',`avatar`='',`sex`=0,`email`='',`status`=1,`remark`='this a cat ,name is tom!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1  AND user_id = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:34 D:/codes/ginDemo/model/entity/user.go:29
+[0.511ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:34 D:/codes/ginDemo/model/entity/user.go:41
+[16.607ms] [rows:0] UPDATE `gd_user` SET `user_id`=3,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='',`avatar`='',`sex`=0,`email`='',`status`=1,`remark`='this a cat ,name is tom!',`modifier`=0,`created_time`='2023-09-23 14:06:31',`modified_time`='2023-09-23 14:06:39',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1  AND user_id = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:36:34 D:/codes/ginDemo/model/entity/user.go:41
+[4.087ms] [rows:0] INSERT INTO `gd_user` (`user_id`,`user_name`,`password`,`nick_name`,`phone`,`avatar`,`sex`,`email`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (3,'admin','e10adc3949ba59abbe56e057f20f883e','超级管理员','','',0,'',1,'this a cat ,name is tom!',0,'2023-09-23 14:06:31','2023-09-23 14:06:39',0,'admin','admin',NULL) ON DUPLICATE KEY UPDATE `user_id`=VALUES(`user_id`),`user_name`=VALUES(`user_name`),`password`=VALUES(`password`),`nick_name`=VALUES(`nick_name`),`phone`=VALUES(`phone`),`avatar`=VALUES(`avatar`),`sex`=VALUES(`sex`),`email`=VALUES(`email`),`status`=VALUES(`status`),`remark`=VALUES(`remark`),`modifier`=VALUES(`modifier`),`created_time`=VALUES(`created_time`),`modified_time`=VALUES(`modified_time`),`creater`=VALUES(`creater`),`modifier_name`=VALUES(`modifier_name`),`creater_name`=VALUES(`creater_name`),`deleted_at`=VALUES(`deleted_at`)
+
+2024/12/19 18:40:52 D:/codes/ginDemo/model/entity/user.go:29
+[1.173ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:40:52 D:/codes/ginDemo/model/entity/user.go:41
+[9.332ms] [rows:1] UPDATE `gd_user` SET `user_id`=3,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='',`avatar`='',`sex`=0,`email`='',`status`=1,`remark`='this a cat ,name is tom11!',`modifier`=3,`created_time`='2023-09-23 14:06:31',`modified_time`='2024-12-19 18:40:52.574',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1  AND user_id = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:41:08 D:/codes/ginDemo/model/entity/user.go:29
+[1.020ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:41:08 D:/codes/ginDemo/model/entity/user.go:41
+[6.896ms] [rows:1] UPDATE `gd_user` SET `user_id`=3,`user_name`='admin',`password`='e10adc3949ba59abbe56e057f20f883e',`nick_name`='超级管理员',`phone`='',`avatar`='',`sex`=0,`email`='',`status`=1,`remark`='this a cat ,name is tom11!',`modifier`=3,`created_time`='2023-09-23 14:06:31',`modified_time`='2024-12-19 18:41:08.623',`creater`=0,`modifier_name`='admin',`creater_name`='admin',`deleted_at`=NULL WHERE status = 1  AND user_id = 3 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:41:26 D:/codes/ginDemo/model/entity/user.go:29
+[0.517ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:41:26 D:/codes/ginDemo/model/entity/user.go:29
+[0.595ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 4 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:41:26 D:/codes/ginDemo/model/entity/user.go:41
+[6.932ms] [rows:1] UPDATE `gd_user` SET `user_id`=4,`user_name`='tom',`password`='2b2ebb54b8fbf58caee1a8247fa53b7e',`nick_name`='cat',`phone`='27102371721',`avatar`='',`sex`=1,`email`='ajsgdhajk@sdau.com',`status`=1,`remark`='this a cat ,name is tom2!',`modifier`=4,`created_time`='0000-00-00 00:00:00',`modified_time`='2024-12-19 18:41:26.815',`creater`=0,`modifier_name`='tom',`creater_name`='',`deleted_at`=NULL WHERE status = 1  AND user_id = 4 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:46:26 D:/codes/ginDemo/model/entity/user.go:29
+[0.514ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/19 18:46:26 D:/codes/ginDemo/model/entity/menu.go:21
+[17.815ms] [rows:1] INSERT INTO `gd_menu` (`menu_id`,`menu_name`,`pid`,`level`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'用户',1,1,0,'asdjkhaskd',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)

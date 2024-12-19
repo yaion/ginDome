@@ -8,10 +8,10 @@ app:
 
 # mysql 信息
 mysql:
-  host: 192.168.232.136
+  host: 127.0.0.1
   port: 3306
   user: root
-  password: password
+  password: zSpJJ4BhqcucmEF7
   database: ginDemo
   charset: utf8mb4 # 要支持完整的UTF-8编码,需设置成: utf8mb4
   parseTime: true # 解析time.Time类型

@@ -45,8 +45,8 @@ func Register(ctx *gin.Context) {
 	user.Email = params.Email
 	user.Sex = params.Sex
 	user.Remark = params.Remark
-	user.CreatedTime = time.Now()
-	user.ModifiedTime = time.Now()
+	user.CreatedTime = time.Now().UTC()
+	user.ModifiedTime = time.Now().UTC()
 	ctx.JSON(http.StatusOK, admin.Register(&user))
 }
 
@@ -87,15 +87,25 @@ func UpdateUser(ctx *gin.Context) {
 		ctx.JSONP(http.StatusInternalServerError, gin.H{"error": "系统错误"})
 		return
 	}
-	param := make(map[string]interface{})
+	ModifierName := user.UserName
+	Modifier := user.UserId
+	// 如何是超级管理员就可以修改其他用户数据
+	if params.Id != 0 && user.UserId == 3 {
+		user = new(entity.User)
+		user.UserId = params.Id
+		err := user.GetUserOne()
+		if err != nil {
+			ctx.JSONP(http.StatusInternalServerError, gin.H{"error": "未找到当前用户"})
+			return
+		}
+	}
+
 	// 先设置为必填，以后有需要在做判断
 	if params.UserName != "" {
-		//user.UserName = params.UserName
-		param["user_name"] = params.UserName
+		user.UserName = params.UserName
 	}
 	if params.Password != "" {
-		//user.Password = utils.Md5str(params.Password)
-		param["password"] = params.Password
+		user.Password = utils.Md5str(params.Password)
 	}
 	if params.NickName != "" {
 		user.NickName = params.NickName
@@ -118,5 +128,8 @@ func UpdateUser(ctx *gin.Context) {
 	if params.Remark != "" {
 		user.Remark = params.Remark
 	}
+	user.ModifiedTime = time.Now().UTC()
+	user.Modifier = Modifier
+	user.ModifierName = ModifierName
 	ctx.JSONP(http.StatusOK, admin.UpdateUser(user))
 }
