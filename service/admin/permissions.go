@@ -31,6 +31,23 @@ func CreatePermissions(permissions *entity.Permissions) dto.JsonResult {
 	return result
 }
 
+// UpdatePermissions 更新权限
+func UpdatePermissions(permissions *entity.Permissions) dto.JsonResult {
+	result := dto.JsonResult{}
+	err := permissions.Update()
+	if err != nil {
+		//todo 记录日志
+		result.Code = http.StatusInternalServerError
+		result.Msg = "System error please try again!"
+		return result
+	}
+
+	result.Code = http.StatusOK
+	result.Msg = "success"
+	result.Data = nil
+	return result
+}
+
 func DeletePermissions(permissions []entity.Permissions) dto.JsonResult {
 	result := dto.JsonResult{}
 	Permissions := entity.Permissions{}

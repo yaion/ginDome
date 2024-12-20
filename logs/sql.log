@@ -1168,3 +1168,165 @@
 
 2024/12/19 18:46:26 D:/codes/ginDemo/model/entity/menu.go:21
 [17.815ms] [rows:1] INSERT INTO `gd_menu` (`menu_id`,`menu_name`,`pid`,`level`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'用户',1,1,0,'asdjkhaskd',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)
+
+2024/12/20 17:31:49 D:/codes/ginDemo/model/entity/user.go:29
+[13.581ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_name` = 'admin' AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:32:05 D:/codes/ginDemo/model/entity/user.go:29
+[0.617ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:32:05 D:/codes/ginDemo/model/entity/user.go:73
+[0.517ms] [rows:1] SELECT count(*) FROM `gd_user` WHERE deleted_at is null
+
+2024/12/20 17:32:05 D:/codes/ginDemo/model/entity/user.go:78
+[0.674ms] [rows:2] SELECT * FROM `gd_user` WHERE deleted_at is null AND `gd_user`.`deleted_at` IS NULL ORDER BY phone desc LIMIT 10
+
+2024/12/20 17:32:14 D:/codes/ginDemo/model/entity/user.go:29
+[0.546ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:32:14 D:/codes/ginDemo/model/entity/menu.go:21
+[16.031ms] [rows:1] INSERT INTO `gd_menu` (`menu_id`,`menu_name`,`pid`,`level`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'用户',1,1,0,'asdjkhaskd',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)
+
+2024/12/20 17:33:35 D:/codes/ginDemo/model/entity/user.go:29
+[1.232ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:33:35 D:/codes/ginDemo/model/entity/menu.go:26 Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'menu_id = ?  AND `gd_menu`.`deleted_at` IS NULL' at line 1
+[0.532ms] [rows:0] UPDATE `gd_menu` SET `menu_id`=1,`menu_name`='test',`pid`=1,`level`=1,`status`=1,`remark`='test',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE status = 1 menu_id = 1  AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:34:37 D:/codes/ginDemo/model/entity/user.go:29
+[1.094ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:34:37 D:/codes/ginDemo/model/entity/menu.go:26
+[44.705ms] [rows:1] UPDATE `gd_menu` SET `menu_id`=1,`menu_name`='test',`pid`=1,`level`=1,`status`=1,`remark`='test',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE menu_id = 1  AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:43:05 D:/codes/ginDemo/model/entity/user.go:29
+[0.506ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:43:05 D:/codes/ginDemo/model/entity/menu.go:26
+[16.023ms] [rows:0] UPDATE `gd_menu` SET `menu_id`=1,`menu_name`='test',`pid`=1,`level`=1,`status`=1,`remark`='test',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE menu_id = 1  AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:43:05 D:/codes/ginDemo/model/entity/menu.go:26
+[4.770ms] [rows:0] INSERT INTO `gd_menu` (`menu_id`,`menu_name`,`pid`,`level`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (1,'test',1,1,1,'test',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL) ON DUPLICATE KEY UPDATE `menu_id`=VALUES(`menu_id`),`menu_name`=VALUES(`menu_name`),`pid`=VALUES(`pid`),`level`=VALUES(`level`),`status`=VALUES(`status`),`remark`=VALUES(`remark`),`modifier`=VALUES(`modifier`),`created_time`=VALUES(`created_time`),`modified_time`=VALUES(`modified_time`),`creater`=VALUES(`creater`),`modifier_name`=VALUES(`modifier_name`),`creater_name`=VALUES(`creater_name`),`deleted_at`=VALUES(`deleted_at`)
+
+2024/12/20 17:43:19 D:/codes/ginDemo/model/entity/user.go:29
+[0.505ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:43:19 D:/codes/ginDemo/model/entity/menu.go:56
+[0.513ms] [rows:2] SELECT * FROM `gd_menu` WHERE `gd_menu`.`deleted_at` IS NULL LIMIT 10
+
+2024/12/20 17:43:53 D:/codes/ginDemo/model/entity/user.go:29
+[0.526ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:43:53 D:/codes/ginDemo/model/entity/menu.go:26
+[14.676ms] [rows:1] UPDATE `gd_menu` SET `menu_id`=1,`menu_name`='test11',`pid`=1,`level`=1,`status`=1,`remark`='test',`modifier`=0,`created_time`='0000-00-00 00:00:00',`modified_time`='0000-00-00 00:00:00',`creater`=0,`modifier_name`='',`creater_name`='',`deleted_at`=NULL WHERE menu_id = 1  AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:43:56 D:/codes/ginDemo/model/entity/user.go:29
+[0.591ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:43:56 D:/codes/ginDemo/model/entity/menu.go:56
+[0.544ms] [rows:2] SELECT * FROM `gd_menu` WHERE `gd_menu`.`deleted_at` IS NULL LIMIT 10
+
+2024/12/20 17:45:36 D:/codes/ginDemo/model/entity/user.go:29
+[0.578ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:45:47 D:/codes/ginDemo/model/entity/user.go:29
+[0.556ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:47:26 D:/codes/ginDemo/model/entity/user.go:29
+[0.653ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:47:26 D:/codes/ginDemo/model/entity/menu.go:31 WHERE conditions required
+[0.000ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:47:26.748' WHERE `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:52:20 D:/codes/ginDemo/model/entity/user.go:29
+[1.177ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:52:20 D:/codes/ginDemo/model/entity/menu.go:31 WHERE conditions required
+[0.512ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:52:20.632' WHERE `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:54:15 D:/codes/ginDemo/model/entity/user.go:29
+[1.081ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:54:15 D:/codes/ginDemo/model/entity/menu.go:35 sql: converting argument $2 type: unsupported type []entity.Menu, a slice of struct
+[0.514ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:54:15.772' WHERE menu_id in '[{0  0 0 0  {0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0   {2024-12-20 17:54:15.772 +0800 CST true}}} {0  0 0 0  {0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0   {2024-12-20 17:54:15.772 +0800 CST true}}} {0  0 0 0  {0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0   {2024-12-20 17:54:15.772 +0800 CST true}}} {1  0 0 0  {0 0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC 0   {2024-12-20 17:54:15.772 +0800 CST true}}}]' AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:55:27 D:/codes/ginDemo/model/entity/user.go:29
+[0.557ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:55:27 D:/codes/ginDemo/model/entity/menu.go:35
+[6.803ms] [rows:1] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:55:27.645' WHERE menu_id in (0,0,0,1) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:57:02 D:/codes/ginDemo/model/entity/user.go:29
+[1.023ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:57:02 D:/codes/ginDemo/model/entity/menu.go:35
+[38.040ms] [rows:1] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:57:02.922' WHERE menu_id in (0,0,1,2) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:58:16 D:/codes/ginDemo/model/entity/user.go:29
+[1.060ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:58:16 D:/codes/ginDemo/model/entity/menu.go:35
+[5.078ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:58:16.397' WHERE menu_id in (0,0,0,0,0,0,1,2) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:59:17 D:/codes/ginDemo/model/entity/user.go:29
+[1.032ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:59:17 D:/codes/ginDemo/model/entity/menu.go:37
+[5.797ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:59:17.067' WHERE menu_id in (0,0,1,2) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 17:59:28 D:/codes/ginDemo/model/entity/user.go:29
+[1.290ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 17:59:28 D:/codes/ginDemo/model/entity/menu.go:37
+[18.870ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 17:59:28.69' WHERE menu_id in (0,0,1,2) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 18:00:10 D:/codes/ginDemo/model/entity/user.go:29
+[0.521ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:00:10 D:/codes/ginDemo/model/entity/menu.go:38
+[5.638ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 18:00:10.719' WHERE menu_id in (0,0,1,2) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 18:00:35 D:/codes/ginDemo/model/entity/user.go:29
+[0.516ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:00:35 D:/codes/ginDemo/model/entity/menu.go:39
+[5.966ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 18:00:35.017' WHERE menu_id in (0,0,1,2) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 18:01:35 D:/codes/ginDemo/model/entity/user.go:29
+[0.918ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:01:35 D:/codes/ginDemo/model/entity/menu.go:39
+[5.126ms] [rows:0] UPDATE `gd_menu` SET `deleted_at`='2024-12-20 18:01:35.991' WHERE menu_id in (1,2) AND `gd_menu`.`deleted_at` IS NULL
+
+2024/12/20 18:16:35 D:/codes/ginDemo/model/entity/user.go:29
+[0.536ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:17:08 D:/codes/ginDemo/model/entity/user.go:29
+[0.584ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:17:38 D:/codes/ginDemo/model/entity/user.go:29
+[0.000ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:18:37 D:/codes/ginDemo/model/entity/user.go:29
+[0.626ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:18:37 D:/codes/ginDemo/model/entity/permissions.go:22 Error 1366 (HY000): Incorrect integer value: 'test' for column 'permissions_name' at row 1
+[0.533ms] [rows:0] INSERT INTO `gd_permissions` (`permissions_id`,`handle`,`permissions_name`,`path`,`action`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'admin.user.login','test','/v1/user/login','POST',1,'asdjkagh',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)
+
+2024/12/20 18:20:56 D:/codes/ginDemo/model/entity/user.go:29
+[0.512ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:20:56 D:/codes/ginDemo/model/entity/permissions.go:22
+[9.044ms] [rows:1] INSERT INTO `gd_permissions` (`permissions_id`,`handle`,`permissions_name`,`path`,`action`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'admin.user.login','test','/v1/user/login','POST',1,'asdjkagh',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)
+
+2024/12/20 18:23:17 D:/codes/ginDemo/model/entity/user.go:29
+[0.522ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:23:17 D:/codes/ginDemo/model/entity/permissions.go:22
+[17.303ms] [rows:1] INSERT INTO `gd_permissions` (`permissions_id`,`handle`,`permissions_name`,`path`,`action`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'admin.user.login','test1111','/v1/user/login','POST',1,'asdjkagh',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)
+
+2024/12/20 18:24:42 D:/codes/ginDemo/model/entity/user.go:29
+[0.512ms] [rows:1] SELECT * FROM `gd_user` WHERE `gd_user`.`user_id` = 3 AND `gd_user`.`status` = 1 AND `gd_user`.`deleted_at` IS NULL
+
+2024/12/20 18:24:42 D:/codes/ginDemo/model/entity/permissions.go:22
+[11.267ms] [rows:1] INSERT INTO `gd_permissions` (`permissions_id`,`handle`,`permissions_name`,`path`,`action`,`status`,`remark`,`modifier`,`created_time`,`modified_time`,`creater`,`modifier_name`,`creater_name`,`deleted_at`) VALUES (0,'admin.user.login','test1111','/v1/user/login','POST',1,'asdjkagh',0,'0000-00-00 00:00:00','0000-00-00 00:00:00',0,'','',NULL)

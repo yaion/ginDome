@@ -32,7 +32,7 @@ func CreatePermissions(ctx *gin.Context) {
 	permission := entity.Permissions{}
 	permission.PermissionsName = params.PermissionsName
 	permission.Status = 1
-	routerData, err := utils.GetRouterData("params.Path")
+	routerData, err := utils.GetRouterData(params.Path)
 	if err != nil {
 		//todo 记录日志
 		ctx.JSONP(http.StatusInternalServerError, gin.H{"msg": "Please enter correct parameters path!"})
@@ -82,7 +82,7 @@ func UpdatePermissions(ctx *gin.Context) {
 	permission.Path = params.Path
 	permission.Action = routerData.Action
 	permission.Remark = params.Remark
-	ctx.JSONP(http.StatusOK, admin.CreatePermissions(&permission))
+	ctx.JSONP(http.StatusOK, admin.UpdatePermissions(&permission))
 }
 
 func ListPermissions(ctx *gin.Context) {

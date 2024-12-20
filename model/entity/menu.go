@@ -23,12 +23,20 @@ func (m *Menu) Create() error {
 
 // Update 更新
 func (m *Menu) Update() error {
-	return global.GvaMysqlClient.Where("status = 1 menu_id = ? ", m.MenuId).Save(m).Error
+	return global.GvaMysqlClient.Where("status = 1 and menu_id = ? ", m.MenuId).Save(m).Error
 }
 
 // Del 批量删除
 func (m *Menu) Del(del *[]Menu) error {
-	return global.GvaMysqlClient.Delete(del).Error
+	fmt.Println("del", *del)
+	fmt.Println("del", len(*del))
+	ids := make([]int64, len(*del))
+	i := 0
+	for _, v := range *del {
+		ids[i] = int64(v.MenuId)
+		i++
+	}
+	return global.GvaMysqlClient.Where("menu_id in ?", ids).Delete(del).Error
 }
 
 // List 列表 todo

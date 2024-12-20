@@ -32,9 +32,11 @@ func CreateMenu(ctx *gin.Context) {
 func DeleteMenu(ctx *gin.Context) {
 	params, ok := ctx.Request.Context().Value(global.GvaParams).(*dto.DeleteMenuParams)
 	menus := make([]entity.Menu, len(params.MenuIds))
-	for v, _ := range params.MenuIds {
+	i := 0
+	for _, v := range params.MenuIds {
 		menu := entity.Menu{MenuId: uint64(v)}
-		menus = append(menus, menu)
+		menus[i] = menu
+		i++
 	}
 	if !ok {
 		//todo 记录日志

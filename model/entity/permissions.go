@@ -24,7 +24,7 @@ func (perm *Permissions) Create() error {
 
 // Update 更新
 func (perm *Permissions) Update() error {
-	return global.GvaMysqlClient.Where("status = 1 permissions_id = ? ", perm.PermissionsId).Save(perm).Error
+	return global.GvaMysqlClient.Where("permissions_id = ? ", perm.PermissionsId).Save(perm).Error
 }
 
 // Del 批量删除

@@ -59,7 +59,7 @@ create table `gd_user_role`(
 create table `gd_permissions`(
   `permissions_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT'权限ID',
   `handle` varchar(128) DEFAULT NULL COMMENT 'handle',
-  `permissions_name` int(20) NOT NULL COMMENT'权限名',
+  `permissions_name` varchar(32) NOT NULL COMMENT'权限名',
   `path` varchar(64) NOT NULL COMMENT'地址',
   `action` varchar(16) DEFAULT NULL COMMENT '请求类型',
   `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT'状态：1启用 0停用',

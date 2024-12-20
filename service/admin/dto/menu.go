@@ -11,12 +11,12 @@ type CreateMenuParams struct {
 }
 
 type MenuListParams struct {
-	MenuName string `json:"menu_name" validate:"omitempty"`
-	Level    uint8  `json:"level" validate:"omitempty,numeric"`
-	Remark   string `json:"remark"`
-	Sort     MenuSort
-	Page     uint64 `json:"page" validate:"required,numeric"`
-	PageSize uint64 `json:"page_size" validate:"required,numeric"`
+	MenuName string   `json:"menu_name" validate:"omitempty"`
+	Level    uint8    `json:"level" validate:"omitempty,numeric"`
+	Remark   string   `json:"remark"`
+	Sort     MenuSort `json:"sort"`
+	Page     uint64   `json:"page" validate:"required,numeric"`
+	PageSize uint64   `json:"page_size" validate:"required,numeric"`
 }
 
 type MenuSort struct {
@@ -34,7 +34,7 @@ type UpdateMenuParams struct {
 }
 
 type DeleteMenuParams struct {
-	MenuIds []uint64 `json:"menu_id" validate:"required,numeric"`
+	MenuIds []int64 `json:"menu_id" validate:"required,dive,gt=0"`
 }
 
 type MenuLinkPermissionsParams struct {
